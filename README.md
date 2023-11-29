@@ -10,7 +10,7 @@ PS1Palette is a Bash script designed to simplify the process of customising the 
 - **Safe**: Echoes changes to the `.bashrc` file, allowing easy reversion to original settings.
 
 ## Usage
-1. Clone the repository or download the `PS1Palette.sh` script.
+1. Clone the repository or download the `ps1palette.sh` script.
 ```
 git clone https://github.com/WDoyle123/ps1palette.git
 ```
