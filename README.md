@@ -2,7 +2,7 @@
 
 PS1Palette is a Bash script designed to simplify the process of customising the command prompt (PS1) in Bash. It allows users to easily change the colour of their terminal prompt without needing to understand the complex syntax of PS1 colour codes.
 
-## Example
+## Examples
 <p align="center">
 	<img src="examples/example1.png" alt="example1.png">
 	<img src="examples/example2.png" alt="example2.png">
