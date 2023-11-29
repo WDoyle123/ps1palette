@@ -37,19 +37,21 @@ while true; do
 	read colour
 
         if [[ -v colourCodes[$colour] ]]; then
-		newPS1="\[\e[${colourCodes[$colour]}m\]\u@\h:\w\$ \[\e[0m\]"
+		newPS1="\[\e[${colourCodes[$colour]}m\][\u@\h \w]\$ \[\e[0m\]"
             break
         else
             echo "Invalid colour. Please try again or type 'list' to see all colours."
 	fi
     elif [[ $paint_option == 'segmented' ]]; then
 	    echo
-            echo 'Username@Hostname:~Directory$'
+            echo '[Username@Hostname:~Directory]$'
 	    echo 'Available colours (colour prefixes: b for bold, br for bright, bbr for bright and bold)'
 	    echo 'eg. bred, brred, bbrred'
 	    echo
 	    echo $available_colours
 	    echo
+	    echo 'Brackets colour:'
+	    read brackets_colour
             echo 'Username colour:'
             read username_colour
             echo '@ symbol colour:'
@@ -60,7 +62,8 @@ while true; do
             read working_directory_colour
             echo 'Prompt symbol colour:'
             read prompt_symbol_colour
-
+	
+	brackets_colour_code="${colourCodes[$brackets_colour]}"
 	username_colour_code="${colourCodes[$username_colour]}"
 	at_symbol_colour_code="${colourCodes[$at_symbol_colour]}"
 	hostname_colour_code="${colourCodes[$hostname_colour]}"
@@ -68,7 +71,7 @@ while true; do
 	prompt_symbol_colour_code="${colourCodes[$prompt_symbol_colour]}"
 
 	# Constructing the PS1 string
-	newPS1="\[\e[${username_colour_code}m\]\u\[\e[${at_symbol_colour_code}m\]@\[\e[${hostname_colour_code}m\]\h:\[\e[${working_directory_colour_code}m\]\w\[\e[${prompt_symbol_colour_code}m\]\$ \[\e[0m\]"
+	newPS1="\[\e[${brackets_colour_code}m\][\[\e[${username_colour_code}m\]\u\[\e[${at_symbol_colour_code}m\]@\[\e[${hostname_colour_code}m\]\h \[\e[${working_directory_colour_code}m\]\w\[\e[${brackets_colour_code}m\]]\[\e[0m\]\$ "
         break
     else
         echo "Invalid option. Please type 'full' or 'segmented'."
