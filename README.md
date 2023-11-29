@@ -10,12 +10,19 @@ PS1Palette is a Bash script designed to simplify the process of customising the 
 - **Safe**: Echoes changes to the `.bashrc` file, allowing easy reversion to original settings.
 
 ## Usage
-
-1. Run the script: `./ps1palette.sh`
-2. Choose between `full` or `segmented` colouring options.
-3. For full colouring, select a colour for the entire PS1.
-4. For segmented colouring, select colours for each segment (Username, Hostname, Directory, Prompt Symbol).
-5. Confirm to apply changes to your current session and save them to `.bashrc`.
+1. Clone the repository or download the `PS1Palette.sh` script.
+```
+git clone https://github.com/WDoyle123/ps1palette.git
+```
+2. Make the script executable:
+```
+chmod +x ps1palette.sh
+```
+3. Run the script: `./ps1palette.sh`
+4. Choose between `full` or `segmented` colouring options.
+5. For full colouring, select a colour for the entire PS1.
+6. For segmented colouring, select colours for each segment (Username, Hostname, Directory, Prompt Symbol).
+7. Confirm to apply changes to your current session and save them to `.bashrc`.
 
 ### Colour Prefixes
 
