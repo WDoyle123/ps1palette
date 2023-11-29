@@ -61,4 +61,5 @@ Feel free to fork, modify, and send pull requests or open issues for any improve
 
 ## License
 
+see [LICENSE](LICENSE)
 
